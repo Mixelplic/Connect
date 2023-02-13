@@ -1,0 +1,109 @@
+:root {
+    --background-color: rgb(100, 82, 240);
+    --gameBoard-background-color: yellow;
+    --gameBoard-border-color: rgb(111, 100, 111);
+    --panel-background-color: mediumpurple;
+    --panel-border-color: rgb(111, 100, 111);
+    --gameCircle-border-color: black;
+    --hover-background-color: rgba(185, 173, 211, 0.5);
+    --button-background-color: rgb(185, 173, 211);
+    --button-border-color: rgb(111, 100, 111);
+}
+
+body {
+    background-color: var(--background-color);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.panel {
+    position: absolute;
+    background-color: var(--panel-background-color);
+    border: 8px solid var(--panel-border-color);
+    box-shadow: 7px 5px 15px 3px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.header {
+    top: 6%;
+    left: 50%;
+    height: 80px;
+    width: 300px;
+    margin-left: -120px;
+    border-radius: 20px;
+}
+
+.header-text {
+    font-size: 30px;
+    font-weight: bold;
+    width: 220px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.footer {
+    left: 50%;
+    top: 780px;
+    height: 80px;
+    width: 250px;
+    margin-left: -100px;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.footer button {
+    width: 160px;
+    height: 50px;
+    margin-left: 45px;
+    margin-top: 15px;
+    background-color: var(--button-background-color);
+    font-size: 20px;
+    font-weight: bold;
+    border: 8px solid var(--button-border-color);
+    box-shadow: 3px 5px 10px 2px rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+
+.footer button:hover {
+    background-color: var(--hover-background-color);
+}
+
+.gameBoard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    padding: 20px;
+    width: 520px;
+    position: absolute;
+    left: 50%;
+    margin-left: -250px;
+    top: 20%;
+    background-color: var(--gameBoard-background-color);
+    border: 8px solid var(--gameBoard-border-color);
+    border-radius: 8%;
+    box-shadow: 7px 5px 15px 3px rgba(0, 0, 0, 0.9);
+}
+
+.gameCircle {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 50%;
+    border: 5px solid var(--gameCircle-border-color);
+}
+
+.player_0 {
+    background-color: white;
+}
+
+.player_1 {
+    background-color: red;
+}
+
+.player_2 {
+    background-color: blue;
+}
